@@ -1,0 +1,15 @@
+[package]
+name = "opendal_elixir"
+version = "0.1.0"
+authors = ["Apache OpenDAL <dev@opendal.apache.org>"]
+edition = "2021"
+
+[lib]
+name = "opendal_elixir"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.35.0"
+opendal = { path = "../../../../core", features = ["blocking"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }

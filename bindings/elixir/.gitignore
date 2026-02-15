@@ -1,0 +1,11 @@
+/_build
+/cover
+/deps
+/doc
+/.fetch
+/erl_crash.dump
+*.ez
+opendal_test.beam
+/native/opendal_elixir/target
+/priv/native
+mix.lock
