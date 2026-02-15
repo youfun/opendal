@@ -10,12 +10,28 @@
 
 ## 安装
 
-目前该绑定处于开发阶段。你可以通过 Git 或本地路径在 `mix.exs` 中添加依赖：
+目前该绑定处于开发阶段。你可以通过 Git 或本地路径在 `mix.exs` 中添加依赖。
+
+### 从 Git (当前开发分支)
+
+如果你想使用 `elixir-bindings` 分支的最新代码：
 
 ```elixir
 def deps do
   [
-    {:opendal, github: "apache/opendal", sparse: "bindings/elixir"}
+    {:opendal, git: "https://github.com/apache/opendal.git", branch: "elixir-bindings", sparse: "bindings/elixir"}
+  ]
+end
+```
+
+### 从本地路径 (用于开发)
+
+如果你已经克隆了 `opendal` 仓库到本地：
+
+```elixir
+def deps do
+  [
+    {:opendal, path: "/path/to/opendal/bindings/elixir"}
   ]
 end
 ```
